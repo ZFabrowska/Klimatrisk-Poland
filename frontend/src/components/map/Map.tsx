@@ -20,8 +20,8 @@ function Map() {
     >
     <MapContainer 
       className="klimamap" 
-      center={[64, 10]} 
-      zoom={5} 
+      center={[52, 19]} 
+      zoom={6} 
       maxZoom={9}
       minZoom={4}
       scrollWheelZoom={true}

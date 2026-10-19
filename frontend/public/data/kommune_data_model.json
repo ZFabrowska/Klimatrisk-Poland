@@ -344,8 +344,9 @@
     {
       "key": "2025",
       "name": {
-        "no": "2025",
-        "en": "2025"
+        "no": "2030",
+        "en": "2030",
+        "pl": "2030"
       },
       "description": {
         "no": "Referanseperiode",
@@ -356,7 +357,8 @@
       "key": "2050",
       "name": {
         "no": "2050",
-        "en": "2050"
+        "en": "2050",
+        "pl": "2050"
       },
       "description": {
         "no": "Nær fremtid",
@@ -367,7 +369,8 @@
       "key": "2100",
       "name": {
         "no": "2100",
-        "en": "2100"
+        "en": "2100",
+        "pl": "2100"
       },
       "description": {
         "no": "Fjern fremtid",

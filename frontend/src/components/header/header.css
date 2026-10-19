@@ -75,7 +75,8 @@ header h1 a {
   align-items: center;
   justify-content: space-between;
   height: var(--header-height);
-  padding: 0;
+  padding: 6px 12px;
+  gap: 8px;
   font-size: 1rem;
   font-weight: var(--font-weight-medium);
 }
@@ -124,4 +125,40 @@ header h1 a {
 .reportButton > a:hover {
   background: rgba(0, 0, 0, 0.3);
   color: var(--c-text);
+}
+
+
+
+
+.languageDropdown {
+  position: relative;
+}
+
+.languageDropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  min-width: 140px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px #0002;
+  padding: 4px;
+}
+
+.languageDropdownMenu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.languageDropdownMenu button:hover {
+  background: #eee;
 }
