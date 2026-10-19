@@ -3,7 +3,7 @@ import { persist } from 'zustand/middleware';
 import text from "../assets/text";
 import { viewMode } from "./getUrlParams";
 
-export type Language = "en" | "no";
+export type Language = "en" | "no" | "pl";
 
 const defaultLanguage: Language = viewMode === "embedded" ? "no" : "en";
 const languageStoreKey = viewMode === "embedded" ? "language-store-embedded" : "language-store";
@@ -40,7 +40,7 @@ export {text as t};
 
 
 export function ordinal(n: number, language: Language): string {
-  if (language === "no") {
+  if (language === "no" || language === "pl") {
     return `${n}`; // Don't use ordinal suffixes for current Norwegian phrases.
   }
 
