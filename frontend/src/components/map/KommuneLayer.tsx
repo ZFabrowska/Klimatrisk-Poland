@@ -7,7 +7,8 @@ import type { Polygon as LeafletPolygon } from 'leaflet';
 import { getDataFileJSON } from '../../hooks/getPublicUrl';
 
 type KommuneProperties = { 
-  kommunenummer: KommuneNr; 
+  JPT_KOD_JE: KommuneNr; 
+  JPT_NAZWA_: string;
 };
 type KommuneFeature = Feature<Polygon | MultiPolygon, KommuneProperties>;
 type KommuneGeometryFeature = Feature<Geometry, KommuneProperties>;
@@ -19,7 +20,7 @@ function KommuneLayer() {
   const [komGeoJSON, setKomGeoJSON] = useState<KommuneGeoJSON | null>(null);
 
   useEffect(() => {
-    getDataFileJSON('kommune.geojson').then(geojson => setKomGeoJSON(geojson));
+    getDataFileJSON('powiaty.geojson').then(geojson => setKomGeoJSON(geojson));
   }, []);
 
   const {
@@ -33,7 +34,7 @@ function KommuneLayer() {
   if (!komGeoJSON) return null;
 
   const onEachFeature = (feature: KommuneFeature, layer: LeafletPolygon) => {
-    const komNr = feature.properties.kommunenummer;
+    const komNr = feature.properties.JPT_KOD_JE;
     layer.on({
       mouseover: () => {
         setHighlightedKommune(komNr);
@@ -48,12 +49,13 @@ function KommuneLayer() {
   };
 
   const getColor = (komNr: KommuneNr | null) => {
-    return komNr ? getRiskColor(komNr): 'gray';
+    //return komNr ? getRiskColor(komNr): 'gray';
+    return '#8DB9A8';
   }
 
   const style = (feature?: KommuneGeometryFeature) => {
 
-    const komNr = feature?.properties.kommunenummer || undefined;
+    const komNr = feature?.properties.JPT_KOD_JE || undefined;
 
     return {
       fillColor: getColor(komNr || null),

@@ -9,7 +9,7 @@ function FlyToSelectedKommune() {
   const [komGeoJSON, setKomGeoJSON] = useState<KommuneGeoJSON | null>(null);
   
   useEffect(() => {
-    getDataFileJSON('kommune.geojson').then(geojson => setKomGeoJSON(geojson));
+    getDataFileJSON('powiaty.geojson').then(geojson => setKomGeoJSON(geojson));
   }, []);
 
   const map = useMap();
@@ -22,7 +22,7 @@ function FlyToSelectedKommune() {
     if (!selectedKommune) return;
 
     const feature = komGeoJSON?.features.find(
-      f => f.properties?.kommunenummer === selectedKommune
+      f => f.properties?.JPT_KOD_JE === selectedKommune
     );
 
     if (!feature) return;

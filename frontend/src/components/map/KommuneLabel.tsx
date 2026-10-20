@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react";
 import useDataStore from "../../hooks/useDataStore";
+import { getDataFileJSON } from "../../hooks/getPublicUrl";
+import type { KommuneGeoJSON } from "./KommuneLayer";
 import "./Map.css";
 
 interface Props {
@@ -6,34 +9,29 @@ interface Props {
 }
 
 function KommuneLabel({ mouseOnMap }: Props) {
-  const {
-    highlightedKommune,
-    data,
-    selectedYear,
-    // selectedKommune,
-  } = useDataStore();
+  const { highlightedKommune } = useDataStore();
+  const [geojson, setGeojson] = useState<KommuneGeoJSON | null>(null);
+
+  useEffect(() => {
+    getDataFileJSON("powiaty.geojson").then(setGeojson);
+  }, []);
+
+  const powiat = geojson?.features.find(
+    (feature) =>
+      feature.properties.JPT_KOD_JE === highlightedKommune
+  );
+
+  const nazwaPowiatu = powiat?.properties.JPT_NAZWA_;
 
   return (
     <>
-      {mouseOnMap ? (
-        <>
-          {highlightedKommune && data && selectedYear && (
-            <div className="kommuneLabel">
-              {data.years[selectedYear].byKommune[highlightedKommune].klimarisk_name}
-            </div>
-          )}
-        </>
-      ) : (
-        <>
-          {/* {selectedKommune && data && selectedYear && (
-            <div className="kommuneLabel">
-              {data.years[selectedYear].byKommune[selectedKommune].klimarisk_name}
-            </div>
-          )} */}
-        </>
+      {mouseOnMap && highlightedKommune && nazwaPowiatu && (
+        <div className="kommuneLabel">
+          {nazwaPowiatu}
+        </div>
       )}
     </>
-  )
+  );
 }
 
 export default KommuneLabel;
