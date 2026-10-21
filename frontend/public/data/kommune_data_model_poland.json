@@ -1,0 +1,247 @@
+{
+  "risk": {
+    "name": {
+      "pl": "Ryzyko klimatyczne",
+      "en": "Climate risk",
+      "no": "Climate risk"
+    },
+    "description": {
+      "pl": "Łączny indeks oparty na czterech kategoriach: zagrożeniu, wrażliwości, ekspozycji i zdolności reagowania.",
+      "en": "Composite index based on hazard, vulnerability, exposure and response capacity.",
+      "no": "Composite index based on hazard, vulnerability, exposure and response capacity."
+    }
+  },
+  "elements": [
+    {
+      "key": "f",
+      "name": {
+        "pl": "Zagrożenie",
+        "en": "Hazard",
+        "no": "Hazard"
+      },
+      "description": {
+        "pl": "Średnia dostępnych wskaźników tej kategorii, przeskalowana do zakresu 0–100.",
+        "en": "Mean of available indicators in this category, rescaled to 0–100.",
+        "no": "Mean of available indicators in this category, rescaled to 0–100."
+      },
+      "metrics": [
+        {
+          "key": "H_heatwave",
+          "name": {
+            "pl": "Fale upałów",
+            "en": "Heatwaves",
+            "no": "Heatwaves"
+          }
+        },
+        {
+          "key": "H_rain",
+          "name": {
+            "pl": "Intensywne opady",
+            "en": "Heavy precipitation",
+            "no": "Heavy precipitation"
+          }
+        },
+        {
+          "key": "H_drought",
+          "name": {
+            "pl": "Susza",
+            "en": "Drought",
+            "no": "Drought"
+          }
+        },
+        {
+          "key": "H_wind",
+          "name": {
+            "pl": "Silny wiatr",
+            "en": "Strong wind",
+            "no": "Strong wind"
+          }
+        },
+        {
+          "key": "H_flood",
+          "name": {
+            "pl": "Powodzie",
+            "en": "Flooding",
+            "no": "Flooding"
+          }
+        }
+      ]
+    },
+    {
+      "key": "s",
+      "name": {
+        "pl": "Wrażliwość",
+        "en": "Vulnerability",
+        "no": "Vulnerability"
+      },
+      "description": {
+        "pl": "Średnia dostępnych wskaźników tej kategorii, przeskalowana do zakresu 0–100.",
+        "en": "Mean of available indicators in this category, rescaled to 0–100.",
+        "no": "Mean of available indicators in this category, rescaled to 0–100."
+      },
+      "metrics": [
+        {
+          "key": "V_wealth",
+          "name": {
+            "pl": "Zamożność (odwrócona skala)",
+            "en": "Wealth (inverted scale)",
+            "no": "Wealth (inverted scale)"
+          }
+        },
+        {
+          "key": "V_primary",
+          "name": {
+            "pl": "Sektor pierwotny",
+            "en": "Primary sector",
+            "no": "Primary sector"
+          }
+        },
+        {
+          "key": "V_unemployment",
+          "name": {
+            "pl": "Bezrobocie",
+            "en": "Unemployment",
+            "no": "Unemployment"
+          }
+        },
+        {
+          "key": "V_children",
+          "name": {
+            "pl": "Dzieci",
+            "en": "Children",
+            "no": "Children"
+          }
+        },
+        {
+          "key": "V_elderly",
+          "name": {
+            "pl": "Osoby starsze",
+            "en": "Older people",
+            "no": "Older people"
+          }
+        }
+      ]
+    },
+    {
+      "key": "e",
+      "name": {
+        "pl": "Ekspozycja",
+        "en": "Exposure",
+        "no": "Exposure"
+      },
+      "description": {
+        "pl": "Średnia dostępnych wskaźników tej kategorii, przeskalowana do zakresu 0–100.",
+        "en": "Mean of available indicators in this category, rescaled to 0–100.",
+        "no": "Mean of available indicators in this category, rescaled to 0–100."
+      },
+      "metrics": [
+        {
+          "key": "E_density",
+          "name": {
+            "pl": "Gęstość zaludnienia",
+            "en": "Population density",
+            "no": "Population density"
+          }
+        },
+        {
+          "key": "E_biodiversity",
+          "name": {
+            "pl": "Bioróżnorodność",
+            "en": "Biodiversity",
+            "no": "Biodiversity"
+          }
+        }
+      ]
+    },
+    {
+      "key": "r",
+      "name": {
+        "pl": "Zdolność reagowania",
+        "en": "Response capacity",
+        "no": "Response capacity"
+      },
+      "description": {
+        "pl": "Średnia dostępnych wskaźników zdolności reagowania. W indeksie ryzyka kategoria jest odwracana: większa zdolność reagowania zmniejsza ryzyko.",
+        "en": "Mean of available response-capacity indicators. This category is inverted in the risk index: higher response capacity lowers risk.",
+        "no": "Mean of available response-capacity indicators. This category is inverted in the risk index: higher response capacity lowers risk."
+      },
+      "metrics": [
+        {
+          "key": "R_dst_wealth",
+          "name": {
+            "pl": "Zamożność JST",
+            "en": "Local government wealth",
+            "no": "Local government wealth"
+          }
+        },
+        {
+          "key": "R_env_expenses",
+          "name": {
+            "pl": "Wydatki na ochronę środowiska",
+            "en": "Environmental expenditure",
+            "no": "Environmental expenditure"
+          }
+        }
+      ],
+      "invert": true
+    }
+  ],
+  "years": [
+    {
+      "key": "2030",
+      "name": {
+        "pl": "2030",
+        "en": "2030",
+        "no": "2030"
+      },
+      "description": {
+        "pl": "Horyzont analizy: 2030.",
+        "en": "Analysis horizon: 2030.",
+        "no": "Analysis horizon: 2030."
+      }
+    },
+    {
+      "key": "2050",
+      "name": {
+        "pl": "2050",
+        "en": "2050",
+        "no": "2050"
+      },
+      "description": {
+        "pl": "Horyzont analizy: 2050.",
+        "en": "Analysis horizon: 2050.",
+        "no": "Analysis horizon: 2050."
+      }
+    },
+    {
+      "key": "2100",
+      "name": {
+        "pl": "2100",
+        "en": "2100",
+        "no": "2100"
+      },
+      "description": {
+        "pl": "Horyzont analizy: 2100.",
+        "en": "Analysis horizon: 2100.",
+        "no": "Analysis horizon: 2100."
+      }
+    }
+  ],
+  "documentation": [
+    {
+      "pl": "Dane obejmują 380 powiatów oraz lata 2030, 2050 i 2100. Wskaźniki wejściowe zostały przeskalowane do zakresu 0–100 na wspólnej skali dla wszystkich lat.",
+      "en": "Data cover 380 Polish counties and 2030, 2050 and 2100. Input indicators were rescaled to 0–100 using a common scale across years.",
+      "no": "Data cover 380 Polish counties and 2030, 2050 and 2100. Input indicators were rescaled to 0–100 using a common scale across years."
+    },
+    {
+      "pl": "Brakujące wartości wskaźników nie są zastępowane zerami.",
+      "en": "Missing indicator values are not replaced with zeros.",
+      "no": "Missing indicator values are not replaced with zeros."
+    },
+    {
+      "pl": "Wskaźnik V_wealth został odwrócony podczas normalizacji danych wejściowych. Kategoria zdolności reagowania (r) jest odwracana przy obliczaniu indeksu ryzyka.",
+      "en": "V_wealth was inverted during input-data normalization. Response capacity (r) is inverted when calculating the risk index.",
+      "no": "V_wealth was inverted during input-data normalization. Response capacity (r) is inverted when calculating the risk index."
+    }
+  ]
+}

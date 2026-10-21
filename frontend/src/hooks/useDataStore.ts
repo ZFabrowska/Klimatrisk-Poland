@@ -148,8 +148,8 @@ const useDataStore = create<DataStore>((set, get) => ({
   data: null,
   
   fetchData: async () => {
-    const data: Data = await getDataFileJSON('kommune_data.json');
-    const dataModel: DataModel = await getDataFileJSON('kommune_data_model.json');
+    const data: Data = await getDataFileJSON('kommune_data_poland.json');
+    const dataModel: DataModel = await getDataFileJSON('kommune_data_model_poland.json');
 
     // Enable all elements and metrics by default (.json file might miss disabled property)
     dataModel.elements.forEach(element => {
@@ -351,7 +351,17 @@ const useDataStore = create<DataStore>((set, get) => ({
     const { data, cache, selectedYear, getDistributionDomain, selectedDistribuion, getRiskColors, riskColors } = get();
     const dist = distKey ?? selectedDistribuion;
     const colors = distKey ? getRiskColors(dist) : riskColors;
-    if (!data || !cache || !selectedYear || colors.length === 0 || !cache.years[selectedYear]) return 'gray';
+    if (
+      !data ||
+      !cache ||
+      !selectedYear ||
+      colors.length === 0 ||
+      !cache.years[selectedYear] ||
+      !cache.years[selectedYear].byKommune[komNr] ||
+      !data.years[selectedYear]?.byKommune[komNr]
+    ) {
+      return 'gray';
+    }
     const risk = dist.type === "risk" 
       ? cache.years[selectedYear].byKommune[komNr].totalRisk
       : dist.type === "element"

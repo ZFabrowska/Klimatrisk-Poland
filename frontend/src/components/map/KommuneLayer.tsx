@@ -49,8 +49,7 @@ function KommuneLayer() {
   };
 
   const getColor = (komNr: KommuneNr | null) => {
-    //return komNr ? getRiskColor(komNr): 'gray';
-    return '#8DB9A8';
+    return komNr ? getRiskColor(komNr): 'gray';
   }
 
   const style = (feature?: KommuneGeometryFeature) => {
