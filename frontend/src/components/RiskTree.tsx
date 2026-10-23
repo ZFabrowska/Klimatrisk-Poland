@@ -14,6 +14,55 @@ function RiskTree() {
   } = useDataStore();
   const { l } = useLanguageStore();
 
+  
+  const selectOnlyMetric = (selectedElementKey: string, selectedMetricKey: string) => {
+    if (!dataModel) return;
+
+    dataModel.elements.forEach(element => {
+      // only chosen category
+      element.disabled = element.key !== selectedElementKey;
+
+      element.metrics.forEach(metric => {
+        // only chosen indicator
+        metric.disabled = metric.key !== selectedMetricKey ||
+                          element.key !== selectedElementKey;
+      });
+
+      // result for every category
+      refreshCacheElement(element.key);
+    });
+
+    refreshCacheRisk();
+    checkDistribution();
+  };
+
+  
+
+const selectAllInElement = (selectedElementKey: string) => {
+  if (!dataModel) return;
+
+  const element = dataModel.elements.find(
+    element => element.key === selectedElementKey
+  );
+
+  if (!element) return;
+
+  // enable category
+  element.disabled = false;
+
+  // enable all indicators within category
+  element.metrics.forEach(metric => {
+    metric.disabled = false;
+  });
+
+  // no changes to other categories
+  refreshCacheElement(element.key);
+  refreshCacheRisk();
+  checkDistribution();
+};
+
+
+
   if (!dataModel) {
     return (
       <p>{l(t.common.loading)}</p>
@@ -54,6 +103,13 @@ function RiskTree() {
                 </Tooltip>
               </div>
             </label>
+            <button
+              type="button"
+              className="onlyMetricButton"
+              onClick={() => selectAllInElement(element.key)}
+            >
+              {l({ pl: "Zaznacz wszystkie", en: "Select all", no: "Velg alle" })}
+            </button>
 
             <ul>
               {element.metrics.map(metric => (
@@ -82,6 +138,13 @@ function RiskTree() {
                       </Tooltip>
                     </div>
                   </label>
+                  <button
+                    type="button"
+                    className="onlyMetricButton"
+                    onClick={() => selectOnlyMetric(element.key, metric.key)}
+                  >
+                    {l({ pl: "Tylko", en: "Only", no: "Kun" })}
+                  </button>
                 </li>
               ))}
             </ul>

@@ -58,3 +58,47 @@
 .riskTree .disabled {
   background-color: var(--c-bg1);
 }
+
+
+/* Checkbox, name and button in one row */
+.treeMetric,
+.treeElement {
+  position: relative;
+}
+
+/* Place for button on right side */
+.treeMetric > .treeHandle,
+.treeElement > .treeHandle {
+  padding-right: 5rem;
+}
+
+/* button 'only' */
+.onlyMetricButton {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.35rem;
+
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--c-bg1);
+  color: var(--c-text);
+
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Show button when hovering over the row */
+.treeMetric:hover > .onlyMetricButton,
+.treeElement > .treeHandle:hover + .onlyMetricButton,
+.treeElement > .onlyMetricButton:hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.onlyMetricButton:hover {
+  background-color: var(--c-highlighted);
+}

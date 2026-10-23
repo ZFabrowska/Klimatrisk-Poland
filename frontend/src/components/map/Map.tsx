@@ -1,5 +1,5 @@
 import './Map.css';
-import { MapContainer, TileLayer } from 'react-leaflet';
+import { MapContainer, TileLayer, ScaleControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import KommuneLayer from "./KommuneLayer";
 import FlyToSelectedKommune from './FlyToSelectedKommune';
@@ -34,6 +34,11 @@ function Map() {
         // url="https://cache.kartverket.no/v1/wmts/1.0.0/topograatone/default/webmercator/{z}/{y}/{x}.png"
       />
       <KommuneLayer />
+      <ScaleControl
+        position="bottomleft"
+        metric={true}
+        imperial={false}
+      />
 
       <KommuneLabel mouseOnMap={mouseOver} />
       <FlyToSelectedKommune />

@@ -2,13 +2,13 @@
   "risk": {
     "name": {
       "pl": "Ryzyko klimatyczne",
-      "en": "Climate risk",
-      "no": "Climate risk"
+      "en": "Total Risk",
+      "no": "Total Risiko"
     },
     "description": {
       "pl": "Łączny indeks oparty na czterech kategoriach: zagrożeniu, wrażliwości, ekspozycji i zdolności reagowania.",
-      "en": "Composite index based on hazard, vulnerability, exposure and response capacity.",
-      "no": "Composite index based on hazard, vulnerability, exposure and response capacity."
+      "en": "Composite index of climate risk. Darker colors indicate higher climate risk, while lighter colors indicate lower climate risk.",
+      "no": "Samlet indeks for klimarisiko. Mørk farge betyr høy klimarisiko, lys farge betyr lav klimarisiko."
     }
   },
   "elements": [
@@ -17,12 +17,12 @@
       "name": {
         "pl": "Zagrożenie",
         "en": "Hazard",
-        "no": "Hazard"
+        "no": "Fare"
       },
       "description": {
-        "pl": "Średnia dostępnych wskaźników tej kategorii, przeskalowana do zakresu 0–100.",
-        "en": "Mean of available indicators in this category, rescaled to 0–100.",
-        "no": "Mean of available indicators in this category, rescaled to 0–100."
+        "pl": "Średnia 5 wskaźników kategorii, przeskalowana do zakresu 0–100. Ciemniejsze kolory oznaczają wyższe zagrożenie, a jaśniejsze kolory niższe zagrożenie.",
+        "en": "The mean of 5 hazard indicators, normalized to a scale from 0 to 100. Darker colors indicate higher hazard, while lighter colors indicate lower hazard.",
+        "no": "Gjennomsnittet av 5 fareindikatorer, normalisert til en skala fra 0 til 100. Mørk farge betyr høy fare, lys farge betyr lav fare."
       },
       "metrics": [
         {
@@ -30,7 +30,7 @@
           "name": {
             "pl": "Fale upałów",
             "en": "Heatwaves",
-            "no": "Heatwaves"
+            "no": "Hetebølger"
           }
         },
         {
@@ -38,7 +38,7 @@
           "name": {
             "pl": "Intensywne opady",
             "en": "Heavy precipitation",
-            "no": "Heavy precipitation"
+            "no": "Kraftig nedbør"
           }
         },
         {
@@ -46,15 +46,15 @@
           "name": {
             "pl": "Susza",
             "en": "Drought",
-            "no": "Drought"
+            "no": "Tørke"
           }
         },
         {
           "key": "H_wind",
           "name": {
             "pl": "Silny wiatr",
-            "en": "Strong wind",
-            "no": "Strong wind"
+            "en": "Strong winds",
+            "no": "Kraftig vind"
           }
         },
         {
@@ -62,7 +62,7 @@
           "name": {
             "pl": "Powodzie",
             "en": "Flooding",
-            "no": "Flooding"
+            "no": "Flomfare"
           }
         }
       ]
@@ -72,28 +72,28 @@
       "name": {
         "pl": "Wrażliwość",
         "en": "Vulnerability",
-        "no": "Vulnerability"
+        "no": "Sårbarhet"
       },
       "description": {
         "pl": "Średnia dostępnych wskaźników tej kategorii, przeskalowana do zakresu 0–100.",
         "en": "Mean of available indicators in this category, rescaled to 0–100.",
-        "no": "Mean of available indicators in this category, rescaled to 0–100."
+        "no": "Gjennomsnittet av tilgjengelige indikatorer i denne kategorien, skalert til 0–100."
       },
       "metrics": [
         {
           "key": "V_wealth",
           "name": {
-            "pl": "Zamożność (odwrócona skala)",
-            "en": "Wealth (inverted scale)",
-            "no": "Wealth (inverted scale)"
+            "pl": "Zamożność mieszkańców",
+            "en": "Residents' income",
+            "no": "Innbyggernes inntekt"
           }
         },
         {
           "key": "V_primary",
           "name": {
-            "pl": "Sektor pierwotny",
-            "en": "Primary sector",
-            "no": "Primary sector"
+            "pl": "Zatrudnienie w sektorze pierwotnym",
+            "en": "Primary sector employment",
+            "no": "Primær sektor ansatt"
           }
         },
         {
@@ -101,23 +101,23 @@
           "name": {
             "pl": "Bezrobocie",
             "en": "Unemployment",
-            "no": "Unemployment"
+            "no": "Arbeidsledighet"
           }
         },
         {
           "key": "V_children",
           "name": {
-            "pl": "Dzieci",
-            "en": "Children",
-            "no": "Children"
+            "pl": "Dzieci (0-6 lat)",
+            "en": "Children (0-6 years)",
+            "no": "Barn (0-6 år)"
           }
         },
         {
           "key": "V_elderly",
           "name": {
-            "pl": "Osoby starsze",
-            "en": "Older people",
-            "no": "Older people"
+            "pl": "Osoby starsze (65+ lat)",
+            "en": "Elderly (65+ years)",
+            "no": "Eldre (65+ år)"
           }
         }
       ]
@@ -127,12 +127,12 @@
       "name": {
         "pl": "Ekspozycja",
         "en": "Exposure",
-        "no": "Exposure"
+        "no": "Eksponering"
       },
       "description": {
         "pl": "Średnia dostępnych wskaźników tej kategorii, przeskalowana do zakresu 0–100.",
         "en": "Mean of available indicators in this category, rescaled to 0–100.",
-        "no": "Mean of available indicators in this category, rescaled to 0–100."
+        "no": "Gjennomsnittet av tilgjengelige indikatorer i denne kategorien, skalert til 0–100."
       },
       "metrics": [
         {
@@ -140,7 +140,7 @@
           "name": {
             "pl": "Gęstość zaludnienia",
             "en": "Population density",
-            "no": "Population density"
+            "no": "Befolkningstetthet"
           }
         },
         {
@@ -148,7 +148,7 @@
           "name": {
             "pl": "Bioróżnorodność",
             "en": "Biodiversity",
-            "no": "Biodiversity"
+            "no": "Biologisk mangfold"
           }
         }
       ]
@@ -157,29 +157,29 @@
       "key": "r",
       "name": {
         "pl": "Zdolność reagowania",
-        "en": "Response capacity",
-        "no": "Response capacity"
+        "en": "Response",
+        "no": "Respons"
       },
       "description": {
         "pl": "Średnia dostępnych wskaźników zdolności reagowania. W indeksie ryzyka kategoria jest odwracana: większa zdolność reagowania zmniejsza ryzyko.",
         "en": "Mean of available response-capacity indicators. This category is inverted in the risk index: higher response capacity lowers risk.",
-        "no": "Mean of available response-capacity indicators. This category is inverted in the risk index: higher response capacity lowers risk."
+        "no": "Gjennomsnittet av tilgjengelige indikatorer i denne kategorien, skalert til 0–100."
       },
       "metrics": [
         {
-          "key": "R_dst_wealth",
+          "key": "R_planning",
           "name": {
-            "pl": "Zamożność JST",
-            "en": "Local government wealth",
-            "no": "Local government wealth"
+            "pl": "Pokrycie planami miejscowymi (MPZP)",
+            "en": "Local planning coverage",
+            "no": "Dekning av regional planlegging"
           }
         },
         {
           "key": "R_env_expenses",
           "name": {
-            "pl": "Wydatki na ochronę środowiska",
-            "en": "Environmental expenditure",
-            "no": "Environmental expenditure"
+            "pl": "Udział wydatków inwestycyjnych",
+            "en": "Share of capital expenditure",
+            "no": "Andel av kapitalutgifter"
           }
         }
       ],
@@ -190,14 +190,14 @@
     {
       "key": "2030",
       "name": {
-        "pl": "2030",
-        "en": "2030",
-        "no": "2030"
+        "pl": "2025",
+        "en": "2025",
+        "no": "2025"
       },
       "description": {
-        "pl": "Horyzont analizy: 2030.",
-        "en": "Analysis horizon: 2030.",
-        "no": "Analysis horizon: 2030."
+        "pl": "Horyzont analizy: 2025.",
+        "en": "Analysis horizon: 2025.",
+        "no": "Analysis horizon: 2025."
       }
     },
     {
