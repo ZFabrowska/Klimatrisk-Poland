@@ -31,6 +31,11 @@
             "pl": "Fale upałów",
             "en": "Heatwaves",
             "no": "Hetebølger"
+          },
+          "description": {
+            "pl": "Liczba dni z temperaturą przekraczającą 30°C. Źródło: Klimada",
+            "en": "Number of days with temperature above 30°C. Source: Klimada",
+            "no": "Antall dager med temperatur over 30°C. Kilde: Klimada"
           }
         },
         {
@@ -39,6 +44,11 @@
             "pl": "Intensywne opady",
             "en": "Heavy precipitation",
             "no": "Kraftig nedbør"
+          },
+          "description": {
+            "pl": "Liczba dni z dziennym opadem powyżej 20 mm. Źródło: Klimada",
+            "en": "Number of days with precipitation above 20 mm. Source: Klimada",
+            "no": "Antall dager med nedbør over 20 mm. Kilde: Klimada"
           }
         },
         {
@@ -47,6 +57,11 @@
             "pl": "Susza",
             "en": "Drought",
             "no": "Tørke"
+          },
+          "description": {
+            "pl": "Liczba dni w roku bez opadów. Źródło: Klimada",
+            "en": "Number of days with no precipitation. Source: Klimada",
+            "no": "Antall dager uten nedbør. Kilde: Klimada"
           }
         },
         {
@@ -55,6 +70,11 @@
             "pl": "Silny wiatr",
             "en": "Strong winds",
             "no": "Kraftig vind"
+          },
+          "description": {
+            "pl": "Liczba dni w roku z wiatrem powyżej 10 m/s. Źródło: Klimada",
+            "en": "Number of days with wind speed above 10 m/s. Source: Klimada",
+            "no": "Antall dager med vindhastighet over 10 m/s. Kilde: Klimada"
           }
         },
         {
@@ -63,6 +83,11 @@
             "pl": "Powodzie",
             "en": "Flooding",
             "no": "Flomfare"
+          },
+          "description": {
+            "pl": "Liczba dni z zjawiskami powodziowymi. Źródło: Klimada",
+            "en": "Flood calculations for county level. Source: Klimada",
+            "no": "Flomkalkulasjoner for kommunenivå. Kilde: Klimada"
           }
         }
       ]
@@ -86,6 +111,11 @@
             "pl": "Zamożność mieszkańców",
             "en": "Residents' income",
             "no": "Innbyggernes inntekt"
+          },
+          "description": {
+            "pl": "Mediana zarobków w powiecie. Źródło: GUS",
+            "en": "Median income in the county. Source: GUS",
+            "no": "Median inntekt i fylket. Kilde: GUS"
           }
         },
         {
@@ -94,6 +124,11 @@
             "pl": "Zatrudnienie w sektorze pierwotnym",
             "en": "Primary sector employment",
             "no": "Primær sektor ansatt"
+          },
+          "description": {
+            "pl": "Liczba zatrudnionych w I sektorze do wszystkich zatrudnionych. Źródło: GUS",
+            "en": "Employment in the primary sector as a proportion of total employment. Source: GUS",
+            "no": "Ansettning i den primære sektoren som andel av totalt ansettning. Kilde: GUS"
           }
         },
         {
@@ -102,6 +137,11 @@
             "pl": "Bezrobocie",
             "en": "Unemployment",
             "no": "Arbeidsledighet"
+          },
+          "description": {
+            "pl": "Stopa bezrobocia rejestrowanego. Źródło: GUS",
+            "en": "Unemployment rate. Source: GUS",
+            "no": "Arbeidsledighet. Kilde: GUS"
           }
         },
         {
@@ -110,6 +150,11 @@
             "pl": "Dzieci (0-6 lat)",
             "en": "Children (0-6 years)",
             "no": "Barn (0-6 år)"
+          },
+          "description": {
+            "pl": "Udział dzieci w wieku 0–6 lat w populacji powiatu. Źródło: GUS",
+            "en": "Proportion of children aged 0–6 in the county population. Source: GUS",
+            "no": "Andel barn under 7 år i fylkesbefolkningen. Kilde: GUS"
           }
         },
         {
@@ -118,6 +163,11 @@
             "pl": "Osoby starsze (65+ lat)",
             "en": "Elderly (65+ years)",
             "no": "Eldre (65+ år)"
+          },
+          "description": {
+            "pl": "Udział osób w wieku 65+ w populacji powiatu. Źródło: GUS",
+            "en": "Proportion of people aged 65+ in the county population. Source: GUS",
+            "no": "Andel personer over 65 i fylkesbefolkningen. Kilde: GUS"
           }
         }
       ]
@@ -141,6 +191,11 @@
             "pl": "Gęstość zaludnienia",
             "en": "Population density",
             "no": "Befolkningstetthet"
+          },
+          "description": {
+            "pl": "Źródło: GUS",
+            "en": "Source: GUS",
+            "no": "Kilde: GUS"
           }
         },
         {
@@ -149,6 +204,11 @@
             "pl": "Bioróżnorodność",
             "en": "Biodiversity",
             "no": "Biologisk mangfold"
+          },
+          "description": {
+            "pl": "Udział obszarów prawnie chronionych w powierzchni powiatu. Źródło: GUS",
+            "en": "Proportion of legally protected areas in the county area. Source: GUS",
+            "no": "Andel lovlig beskyttede områder i fylkesområdet. Kilde: GUS"
           }
         }
       ]
@@ -172,14 +232,24 @@
             "pl": "Pokrycie planami miejscowymi (MPZP)",
             "en": "Local planning coverage",
             "no": "Dekning av regional planlegging"
+          },
+          "description": {
+            "pl": "Udział miejscowych planów zagospodarowania przestrzennego w powierzchni powiatu. Źródło: GUS",
+            "en": "Proportion of local spatial development plans in the county area. Source: GUS",
+            "no": "Andel lokale planer for regionalt nivå. Kilde: GUS"
           }
         },
         {
           "key": "R_env_expenses",
           "name": {
-            "pl": "Udział wydatków inwestycyjnych",
-            "en": "Share of capital expenditure",
+            "pl": "Wydatki inwestycyjne",
+            "en": "Capital expenditure",
             "no": "Andel av kapitalutgifter"
+          },
+          "description": {
+            "pl": "Udział wydatków inwestycyjnych w budżecie powiatu. Źródło: GUS",
+            "en": "Proportion of capital expenditure in the county budget. Source: GUS",
+            "no": "Andel av kapitalutgifter i fylkesbudgeten. Kilde: GUS"
           }
         }
       ],

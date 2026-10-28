@@ -14,8 +14,8 @@ const text = {
         pl: "Widok kraju",
       },
       l2: {
-        en: "Municipality analysis",
-        no: "Kommuneanalyse",
+        en: "County analysis",
+        no: "Fylkesanalyse",
         pl: "Analiza powiatu",
       },
       label: {
@@ -48,19 +48,19 @@ const text = {
       no: "Kartvindu",
       pl: "Mapa",
       tooltip: {
-        en: "This map shows the selected metric for all municipalities in Poland. The selected municipality is highlighted with a black outline. You can zoom and pan the map to explore different areas, and click on municipalities to select them. The colors represent the relative values of the currently selected metric, where stronger colors indicate higher risk contribution.",
-        no: "Dette kartet viser den valgte metrikken for alle kommuner i Polsk. Den valgte kommunen er markert med en svart kantlinje. Du kan zoome og flytte kartet for å utforske ulike områder, og klikke på kommuner for å velge dem. Fargene representerer de relative verdiene til den valgte metrikken, der sterkere farger indikerer høyere risikotillegg.",
+        en: "This map shows the selected metric for all Counties in Poland. The selected County is highlighted with a black outline. You can zoom and pan the map to explore different areas, and click on Counties to select them. The colors represent the relative values of the currently selected metric, where stronger colors indicate higher risk contribution.",
+        no: "Dette kartet viser den valgte metrikken for alle fylker i Polen. Det valgte fylket er markert med en svart kantlinje. Du kan zoome og flytte kartet for å utforske ulike områder, og klikke på fylker for å velge dem. Fargene representerer de relative verdiene til den valgte metrikken, der sterkere farger indikerer høyere risikotillegg.",
         pl: "Ta mapa pokazuje wybraną metrykę dla wszystkich powiatów w Polsce. Wybrany powiat jest wyróżniony czarną obwódką. Możesz powiększać i przesuwać mapę, aby eksplorować różne obszary, oraz klikać na powiaty, aby je wybierać. Kolory reprezentują względne wartości aktualnie wybranej metryki, gdzie silniejsze kolory wskazują na wyższy wkład ryzyka.",
       },
     },
     chart: {
-      en: "Municipality Distribution Chart",
-      no: "Kommune-fordeling",
-      pl: "Rozkład powiatów",
+      en: "Distribution of climate risk",
+      no: "Fordeling av klimarisiko",
+      pl: "Rozkład ryzyka klimatycznego",
       tooltip: {
-        en: "This chart shows the distribution of the chosen metric accross all municipalities in the nation and in the selected municipality's county. The possible metrics are the overall risk, the determinants, and the indicators. The mean and median values for the nation and county can be toggled by clicking their values below the chart. By hovering over the chart, you can see the number of municipalities that have a value within the hovered bin. Above the chart, you can change the metric that is shown in the chart.",
-        no: "Dette diagrammet viser fordelingen av den valgte metrikken blant alle kommuner i landet og innenfor fylket til den valgte kommunen. Metrikkene som kan vises inkluderer samlet risiko, determinantene og indikatorene. Gjennomsnitts- og medianverdier for både landet og fylket kan vises eller skjules ved å klikke på verdiene under diagrammet. Ved å holde musepekeren over diagrammet kan du se hvor mange kommuner som ligger innenfor det aktuelle intervallet. Over diagrammet kan du velge hvilken metrikk som skal vises.",
-        pl: "Ten wykres pokazuje rozkład wybranej metryki wśród wszystkich powiatów w kraju i w wybranym powiecie. Możliwe metryki to całkowite ryzyko, determinanty i wskaźniki. Średnie i mediany dla kraju i powiatu można przełączać, klikając ich wartości poniżej wykresu. Najedź kursorem na wykres, aby zobaczyć liczbę powiatów, które mają wartość w obrębie najechanego przedziału. Powyżej wykresu możesz zmienić metrykę wyświetlaną na wykresie.",
+        en: "This chart compares the distribution of the selected value across all counties in Poland and across counties in the voivodeship of the selected county. You can display overall climate risk, risk components, or individual indicators. Hover over the chart to see how many counties fall within a given value range. Click the mean or median values below the chart to show or hide their lines.",
+        no: "Dette diagrammet sammenligner fordelingen av den valgte verdien blant alle fylker i Polen og blant fylkene i voivodskapet som det valgte fylket tilhører. Du kan vise samlet klimarisiko, risikokomponenter eller enkeltindikatorer. Hold musepekeren over diagrammet for å se hvor mange fylker som ligger innenfor et bestemt verdiintervall. Klikk på gjennomsnitts- eller medianverdiene under diagrammet for å vise eller skjule de tilhørende linjene.",
+        pl: "Wykres porównuje rozkład wybranej wartości wśród wszystkich powiatów w Polsce oraz powiatów należących do województwa wybranego powiatu. Możesz wyświetlić łączne ryzyko klimatyczne, jego składowe lub poszczególne wskaźniki. Najedź kursorem na wykres, aby zobaczyć, ile powiatów mieści się w danym przedziale wartości. Kliknij średnią lub medianę pod wykresem, aby pokazać albo ukryć odpowiadające im linie.",
       },
     },
     table: {
@@ -68,19 +68,19 @@ const text = {
       no: "Datatabell",
       pl: "Widok tabeli",
       tooltip: {
-        en: "This table displays the selected municipality together with all municipalities in the country. Click a column header to sort and rank the municipalities by that value, and click again to reverse the sorting direction. All determinants and indicators are included in the table only in the 'Municipality analysis' analysis mode. Click a municipality row to select it throughout the dashboard. The colored square at the beginning of each row matches the municipality's color on the map for the currently selected metric.",
-        no: "Denne tabellen viser den valgte kommunen sammen med alle kommuner i landet. Klikk på en kolonneoverskrift for å sortere og rangere kommunene etter den verdien, og klikk igjen for å bytte sorteringsretning. Alle determinanter og indikatorer er inkludert i tabellen kun i analysemodusen 'Kommuneanalyse'. Klikk på en kommunerad for å velge kommunen i hele dashbordet. Den fargede ruten i starten av hver rad tilsvarer kommunens farge på kartet for den valgte metrikken.",
-        pl: "Ta tabela wyświetla wybrany powiat razem z wszystkimi powiatami w kraju. Kliknij na nagłówek kolumny, aby posortować i rangować powiaty według tej wartości, a następnie kliknij ponownie, aby odwrócić kierunek sortowania. Wszystkie determinanty i wskaźniki są uwzględniane w tabeli tylko w trybie analizy 'Analiza powiatu'. Kliknij na wiersz powiatu, aby ją wybrać w całym dashboardzie. Kolorowy kwadrat na początku każdego wiersza odpowiada kolorowi powiatu na mapie dla aktualnie wybranej metryki.",
+        en: "This table displays the selected County together with all Counties in the country. Click a column header to sort and rank the Counties by that value, and click again to reverse the sorting direction. All determinants and indicators are included in the table only in the 'County analysis' analysis mode. Click a County row to select it throughout the dashboard. The colored square at the beginning of each row matches the County's color on the map for the currently selected metric.",
+        no: "Denne tabellen viser det valgte fylket sammen med alle fylker i landet. Klikk på en kolonneoverskrift for å sortere og rangere fylkene etter den verdien, og klikk igjen for å bytte sorteringsretning. Alle determinanter og indikatorer er inkludert i tabellen kun i analysemodusen 'Fylkesanalyse'. Klikk på en fylkerad for å velge fylket i hele dashbordet. Den fargede ruten i starten av hver rad tilsvarer fylkets farge på kartet for den valgte metrikken.",
+        pl: "Ta tabela wyświetla wybrany powiat razem z wszystkimi powiatami w kraju. Kliknij na nagłówek kolumny, aby posortować i rangować powiaty według tej wartości, a następnie kliknij ponownie, aby odwrócić kierunek sortowania. Wszystkie determinanty i wskaźniki są uwzględniane w tabeli tylko w trybie analizy 'Analiza powiatu'. Kliknij na wiersz powiatu, aby go wybrać w całym dashboardzie. Kolorowy kwadrat na początku każdego wiersza odpowiada kolorowi powiatu na mapie dla aktualnie wybranej metryki.",
       },
     },
     details: {
-      en: "Municipality Rankings",
-      no: "Rangering av kommunen",
+      en: "County Rankings",
+      no: "Rangering av fylket",
       pl: "Ranking powiatu",
       tooltip: {
-        en: "This panel shows the selected municipality's rankings for all determinants and indicators. The rankings are displayed both nationally and within the municipality's county. A ranking of 1 means the municipality has the highest climate risk for that metric within the selected group, so lower ranking numbers indicate higher relative risk. The colored square beside each metric matches the municipality's color on the map when that metric is selected. Clicking a determinant or indicator selects it throughout the dashboard. The determinants are sorted by their contribution to the overall risk, while the indicators within each determinant are sorted by their contribution to that determinant.",
-        no: "Dette panelet viser rangeringene til den valgte kommunen for alle determinanter og indikatorer. Rangeringene vises både nasjonalt og innenfor kommunens fylke. En rangering på 1 betyr at kommunen har høyest klimarisiko for den metrikken innenfor den valgte gruppen, så lave rangeringsverdier indikerer høyere relativ risiko. Den fargede ruten ved siden av hver metrikk tilsvarer kommunens farge på kartet når den metrikken er valgt. Ved å klikke på en determinant eller indikator velges den i hele dashbordet. Determinantene er sortert etter hvor mye de bidrar til den overordnede risikoen, mens indikatorene innenfor hver determinant er sortert etter hvor mye de bidrar til determinantens verdi.",
-        pl: "Ten panel pokazuje rankingi wybranego powiatu dla wszystkich determinantów i wskaźników. Rankingi są wyświetlane zarówno na poziomie krajowym, jak i w obrębie powiatu. Ranking 1 oznacza, że powiat ma najwyższe ryzyko klimatyczne dla tej metryki w wybranej grupie, więc niższe numery rankingowe wskazują na wyższe ryzyko względne. Kolorowy kwadrat obok każdej metryki odpowiada kolorowi powiatu na mapie, gdy ta metryka jest wybrana. Kliknięcie determinanty lub wskaźnika powoduje jej zaznaczenie w całym dashboardzie. Determinanty są sortowane według ich wkładu w całkowite ryzyko, podczas gdy wskaźniki w ramach każdej determinanty są sortowane według ich wkładu w tę determinantę.",
+        en: "This panel shows the selected county's rankings for all risk components and indicators. Rankings are displayed both nationally and within the county's voivodeship. A ranking of 1 indicates the highest risk value for that metric within the comparison group. The colored square beside each metric matches the county's color on the map when that metric is selected. Clicking a component or indicator selects it throughout the dashboard. Components are sorted by their contribution to overall risk, while indicators within each component are sorted by their contribution to that component.",
+        no: "Dette panelet viser rangeringen til det valgte fylket for alle risikokomponenter og indikatorer. Rangeringene vises både nasjonalt og innenfor voivodskapet som fylket tilhører. En rangering som nummer 1 betyr at fylket har den høyeste risikoverdien for den aktuelle variabelen i sammenligningsgruppen. Den fargede ruten ved siden av hver variabel tilsvarer fylkets farge på kartet når variabelen er valgt. Ved å klikke på en risikokomponent eller indikator velges den i hele dashbordet. Risikokomponentene er sortert etter hvor mye de bidrar til den samlede risikoen, mens indikatorene innenfor hver komponent er sortert etter hvor mye de bidrar til komponenten.",
+        pl: "Ten panel przedstawia pozycję wybranego powiatu w rankingach poszczególnych składowych ryzyka i wskaźników. Rankingi są prezentowane zarówno na poziomie całej Polski, jak i województwa, do którego należy powiat. Pozycja 1 oznacza najwyższą wartość ryzyka dla danej zmiennej w porównywanej grupie. Kolorowy kwadrat obok każdej zmiennej odpowiada kolorowi powiatu na mapie po jej wybraniu. Kliknięcie składowej lub wskaźnika powoduje wybranie jej w całym panelu. Składowe są uporządkowane według ich wkładu w całkowite ryzyko, a wskaźniki według wkładu w daną składową.",
       },
     },
   },
@@ -93,17 +93,18 @@ const text = {
       },
       norway: {
         en: "Poland",
-        no: "Polsk",
+        no: "Polen",
         pl: "Polska",
       },
       county: {
-        en: "County",
-        no: "Fylke",
-        pl: "Powiat",
+        en: "Voivodeship",
+        no: "Voivodskap",
+        pl: "Województwo",
       },
       kommuner: {
-        en: "municipalities",
-        no: "kommuner",
+        en: "Counties",
+        no: "fylker",
+        pl: "powiaty",
       },
       interval: {
         en: "Interval",
@@ -124,22 +125,22 @@ const text = {
       },
       tooltip: {
         norge: {
-          en: "This column shows the mean and median value of all municipalities in the nation.",
-          no: "Denne kolonnen viser gjennomsnitt og median for alle kommunene i landet.",
-          pl: "Ta kolumna pokazuje średnią i medianę wartości dla wszystkich powiatów w kraju.",
+          en: "This column shows the mean and median values for all counties in Poland.",
+          no: "Denne kolonnen viser gjennomsnittet og medianen for alle fylkene i Polen.",
+          pl: "Ta kolumna pokazuje średnią i medianę wartości dla wszystkich powiatów w Polsce.",
         },
         fylke: {
-          en: "This column shows the mean and median value of all municipalities in the selected municipality's county.",
-          no: "Denne kolonnen viser gjennomsnitt og median for alle kommunene i den valgte kommuens fylke.",
-          pl: "Ta kolumna pokazuje średnią i medianę wartości dla wszystkich powiatów",
+          en: "This column shows the mean and median values for all counties in the selected county's voivodeship.",
+          no: "Denne kolonnen viser gjennomsnittet og medianen for alle fylkene i voivodskapet som det valgte fylket tilhører.",
+          pl: "Ta kolumna pokazuje średnią i medianę wartości dla wszystkich powiatów w województwie wybranego powiatu.",
         },
       },
     },
   },
   table: {
     kommune: {
-      en: "Municipality",
-      no: "Kommune",
+      en: "County",
+      no: "Fylke",
       pl: "Powiat",
     },
     risk: {
@@ -150,20 +151,20 @@ const text = {
   },
   details: {
     selectSomething: {
-      en: "Select a municipality.",
-      no: "Velg en kommune.",
+      en: "Select a County.",
+      no: "Velg et fylke.",
       pl: "Wybierz powiat.",
     },
     tooltip: {
       norge: {
-        en: "The number represents the selected municipality's placement among all municipalities in the nation. Ranking number 1 means the selected municipality is the worst, with no other municipalities having a worse value.",
-        no: "Nummeret representerer den valgte kommunens plassering blant alle kommunene i landet. Å være rangert nummer 1 betyr at den valgte kommunen er verst, og at ingen andre kommuner har en verre verdi.",
+        en: "The number represents the selected County's placement among all Counties in the nation. Ranking number 1 means the selected County is the worst, with no other Counties having a worse value.",
+        no: "Nummeret representerer det valgte fylkets plassering blant alle fylkene i landet. Å være rangert nummer 1 betyr at det valgte fylket er verst, og at ingen andre fylker har en verre verdi.",
         pl: "Numer reprezentuje pozycję wybranego powiatu wśród wszystkich powiatów w kraju. Ranking numer 1 oznacza, że wybrany powiat jest najgorszy, a żaden inny powiat nie ma gorszej wartości.",
       },
       fylke: {
-        en: "The number represents the selected municipality's placement among all municipalities in its own county. Ranking number 1 means the selected municipality is the worst in its county, with no other municipalities in the county having a worse value.",
-        no: "Nummeret representerer den valgte kommunens plassering blant alle kommunene i fylket sitt. Å være rangert nummer 1 betyr at den valgte kommunen er verst i fylket, og at ingen andre kommuner i fylket har en verre verdi.",
-        pl: "Numer reprezentuje pozycję wybranego powiatu wśród wszystkich powiatów w jego powiecie. Ranking numer 1 oznacza, że wybrany powiat jest najgorszy w swoim powiecie, a żaden inny powiat w powiecie nie ma gorszej wartości.",
+        en: "This number shows the selected county's ranking among all counties in its voivodeship. A ranking of 1 means that the county has the highest risk value in its voivodeship.",
+        no: "Tallet viser plasseringen til det valgte fylket blant alle fylkene i voivodskapet det tilhører. En rangering som nummer 1 betyr at fylket har den høyeste risikoverdien i sitt voivodskap.",
+        pl: "Liczba pokazuje pozycję wybranego powiatu w rankingu wszystkich powiatów w jego województwie. Pozycja 1 oznacza, że powiat ma najwyższą wartość ryzyka w swoim województwie.",
       },
     },
     generateReport: {
@@ -174,8 +175,8 @@ const text = {
   },
   report: {
     title: {
-      en: "Municipality climate risk report",
-      no: "Kommunal klimarisikorapport",
+      en: "County climate risk report",
+      no: "Klimarisikorapport for fylket",
       pl: "Raport o ryzyku klimatycznym powiatu",
     },
     viewer: {
@@ -190,14 +191,14 @@ const text = {
         pl: "Nie można wygenerować raportu.",
       },
     },
-    selectMunicipality: {
-      en: "Select municipality",
-      no: "Velg kommune",
+    selectCounty: {
+      en: "Select County",
+      no: "Velg fylke",
       pl: "Wybierz powiat",
     },
-    selectMunicipalityDescription: {
-      en: "Select the municipality you want to generate a report for.",
-      no: "Velg kommunen du ønsker å generere en rapport for.",
+    selectCountyDescription: {
+      en: "Select the County you want to generate a report for.",
+      no: "Velg fylket du ønsker å generere en rapport for.",
       pl: "Wybierz powiat, dla którego chcesz wygenerować raport.",
     },
     selectYear: {
@@ -222,8 +223,8 @@ const text = {
         pl: "Generowanie raportu",
       },
       fileName: {
-        en: "municipality-climate-risk-report.pdf",
-        no: "kommunal-klimarisikorapport.pdf",
+        en: "County-climate-risk-report.pdf",
+        no: "fylke-klimarisikorapport.pdf",
         pl: "raport-ryzyko-klimatyczne.pdf",
       },
     },
@@ -250,19 +251,19 @@ const text = {
           pl: "spośród",
         },
         p3: {
-          en: "municipalities in",
-          no: "kommuner i",
+          en: "Counties in",
+          no: "fylker i",
           pl: "powiatów w",
         },
         norge: {
           en: "Poland",
-          no: "Polsk",
+          no: "Polen",
           pl: "Polsce",
         },
         fylke: {
-          en: "its county",
-          no: "fylket",
-          pl: "powiat",
+          en: "its voivodeship",
+          no: "voivodskapet",
+          pl: "województwie",
         },
         p4: {
           en: "(1 = highest climate risk)",
@@ -272,8 +273,8 @@ const text = {
       },
       titlePage: {
         chosenKommune: {
-          en: "Selected municipality:",
-          no: "Valgt kommune:",
+          en: "Selected County:",
+          no: "Valgt fylke:",
           pl: "Wybrany powiat:",
         },
         chosenYear: {
@@ -283,8 +284,8 @@ const text = {
         },
       },
       undefinedIndicator: {
-        en: "The municipality has not received a score for this indicator.",
-        no: "Kommunen har ikke fått en skår for denne indikatoren.",
+        en: "The County has not received a score for this indicator.",
+        no: "Fylket har ikke fått en skår for denne indikatoren.",
         pl: "Powiat nie otrzymał wyniku dla tego wskaźnika.",
       },
       documentationPage: {

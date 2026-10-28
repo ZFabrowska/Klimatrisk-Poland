@@ -78,6 +78,32 @@ function median(sortedArr: number[]): number | undefined {
 }
 
 
+function formatCountyCount(count: number, language: string): string {
+  if (language === "pl") {
+    if (count === 1) return "powiat";
+
+    const lastDigit = count % 10;
+    const lastTwoDigits = count % 100;
+
+    if (
+      lastDigit >= 2 &&
+      lastDigit <= 4 &&
+      !(lastTwoDigits >= 12 && lastTwoDigits <= 14)
+    ) {
+      return "powiaty";
+    }
+
+    return "powiatów";
+  }
+
+  if (language === "no") {
+    return count === 1 ? "powiat" : "powiater";
+  }
+
+  return count === 1 ? "county" : "counties";
+}
+
+
 
 function DistributionChart({ distributionKey, bins = 25 }: Props) {
   const { 
@@ -89,7 +115,7 @@ function DistributionChart({ distributionKey, bins = 25 }: Props) {
     getDistributionDomain, 
     riskColors,
   } = useDataStore();
-  const { l } = useLanguageStore();
+  const { l, language } = useLanguageStore();
 
   const yearData = data && data.years && selectedYear ? data!.years[selectedYear] : undefined;
   const yearCache = cache && cache.years && selectedYear ? cache!.years[selectedYear] : undefined;
@@ -237,11 +263,11 @@ function DistributionChart({ distributionKey, bins = 25 }: Props) {
                     {`${l(t.chart.tooltip.interval)}: ${payload.intervalStart?.toFixed(0)} – ${payload.isLastInterval ? "" : "<"}${payload.intervalEnd?.toFixed(0)}`}
                   </div>
                   <div style={{ color: "var(--c-norge)" }}>
-                    {`${l(t.chart.tooltip.norway)}: ${payload.count} ${l(t.chart.tooltip.kommuner)}`}
+                    {`${l(t.chart.tooltip.norway)}: ${payload.count} ${formatCountyCount(payload.count, language)}`}
                   </div>
                   {selectedKommune && (
                     <div style={{ color: "var(--c-fylke)" }}>
-                      {`${l(t.chart.tooltip.county)}: ${payload.countCounty} ${l(t.chart.tooltip.kommuner)}`}
+                      {`${l(t.chart.tooltip.county)}: ${payload.countCounty} ${formatCountyCount(payload.countCounty ?? 0, language)}`}
                     </div>
                   )}
                 </div>
