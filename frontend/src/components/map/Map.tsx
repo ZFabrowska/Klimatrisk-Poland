@@ -1,11 +1,12 @@
 import './Map.css';
-import { MapContainer, TileLayer, ScaleControl } from 'react-leaflet';
+import { MapContainer, TileLayer, ScaleControl, ZoomControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import KommuneLayer from "./KommuneLayer";
 import FlyToSelectedKommune from './FlyToSelectedKommune';
 import InvalidateMapSize from "./InvalidateMapSize";
 import KommuneLabel from './KommuneLabel';
 import { useState } from 'react';
+import PowiatSearch from './PowiatSearch';
 
 
 function Map() {
@@ -18,14 +19,19 @@ function Map() {
       onMouseEnter={() => setMouseOver(true)}
       onMouseLeave={() => setMouseOver(false)}
     >
-    <MapContainer 
-      className="klimamap" 
-      center={[52, 19]} 
-      zoom={6} 
-      maxZoom={9}
-      minZoom={4}
-      scrollWheelZoom={true}
-    >
+      <PowiatSearch />
+
+      <MapContainer
+        className="klimamap"
+        center={[52, 19]}
+        zoom={6}
+        maxZoom={9}
+        minZoom={4}
+        scrollWheelZoom={true}
+        zoomControl={false}
+      >
+      <ZoomControl position="topright" />
+
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         // attribution='&copy; <a href="http://www.kartverket.no/">Kartverket</a>'
