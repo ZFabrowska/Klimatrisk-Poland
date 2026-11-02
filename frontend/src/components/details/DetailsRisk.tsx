@@ -29,6 +29,16 @@ function DetailsRisk({ r }: Props) {
   }
 
   const kommuneCache = cache && selectedYear && selectedKommune ? cache.years[selectedYear].byKommune[selectedKommune] : null
+
+  const allPowiatCodes = cache && selectedYear
+  ? Object.keys(cache.years[selectedYear].byKommune)
+  : [];
+
+  const totalPowiatyPolska = allPowiatCodes.length;
+
+  const totalPowiatyWojewodztwo = selectedKommune
+    ? allPowiatCodes.filter(kod => kod.startsWith(selectedKommune.slice(0, 2))).length
+    : 0;
   
   const sortedElements = kommuneCache ? [...r.elements].sort((a, b) => {
     const aVal = a.invert ? 100 - kommuneCache[a.key] : kommuneCache[a.key];
@@ -78,9 +88,15 @@ function DetailsRisk({ r }: Props) {
         </div>
         <div className="detailsRank">
           {r.rank}
+          <span style={{ fontSize: "0.7em", opacity: 0.65 }}>
+            /{totalPowiatyPolska}
+          </span>
         </div>
         <div className="detailsRankFylke">
           {r.rankFylke}
+          <span style={{ fontSize: "0.7em", opacity: 0.65 }}>
+            /{totalPowiatyWojewodztwo}
+          </span>
         </div>
       </button>
       <ul>

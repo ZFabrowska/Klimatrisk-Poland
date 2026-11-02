@@ -40,7 +40,6 @@ function PowiatSearch() {
   const t = translations[language];
 
   const [powiaty, setPowiaty] = useState<Powiat[]>([]);
-
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
@@ -77,7 +76,7 @@ function PowiatSearch() {
 
   function wybierzPowiat(powiat: Powiat) {
     setSelectedKommune(powiat.kod);
-    setQuery(powiat.nazwa);
+    setQuery("");
     setIsOpen(false);
   }
 

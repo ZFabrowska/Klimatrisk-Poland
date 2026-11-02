@@ -11,23 +11,29 @@
   display: flex;
   user-select: none;
   flex-direction: row;
-  justify-content: end;
-  padding: 0 1.5rem;
+  justify-content: flex-end;
+  padding: 0 1rem;
   position: sticky;
   top: 0;
   background-color: var(--c-bg1);
   z-index: 1;
 }
+
 .detailsHeader > div {
-  width: 3.2em;
+  width: 5rem;
+  flex-shrink: 0;
   text-align: center;
+  font-size: 0.8rem;
+  white-space: nowrap;
   color: var(--detailsHeaderColor);
   border-bottom: 2px solid var(--detailsHeaderColor);
 }
+
 .detailsHeader > div:last-child {
-  width: 2.9em;
-  margin-left: .8em;
+  width: 6rem;
+  margin-left: 0.5rem;
 }
+
 .detailsRisk {
   display: flex;
   flex-direction: column;
@@ -42,7 +48,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: left;
-  padding-right: 2rem;
+  padding-right: 1rem;
   line-height: 1em;
   padding-left: var(--detail-padding);
   padding-block: var(--detail-padding);
@@ -67,15 +73,19 @@
 
 .detailsRank {
   color: var(--c-norge);
-  width: 3rem;
-  text-align: right;
-
+  width: 5rem;
+  flex-shrink: 0;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .detailsRankFylke {
   color: var(--c-fylke);
-  width: 3.5rem;
-  text-align: right;
+  width: 6rem;
+  flex-shrink: 0;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: 0.5rem;
 }
 
 .detailsList ul {
@@ -116,4 +126,7 @@
   flex-grow: 1;
 }
 
+.detailsName {
+  text-align: left;
+}
 

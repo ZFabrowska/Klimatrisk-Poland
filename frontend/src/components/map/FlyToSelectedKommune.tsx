@@ -32,7 +32,7 @@ function FlyToSelectedKommune() {
     if (bounds.isValid()) {
       map.fitBounds(bounds, {
         padding: [60, 60],
-        maxZoom: 8,
+        maxZoom: 9,
         animate: true,
       });
     }
