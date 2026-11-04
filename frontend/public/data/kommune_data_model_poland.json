@@ -113,9 +113,9 @@
             "no": "Innbyggernes inntekt"
           },
           "description": {
-            "pl": "Mediana zarobków w powiecie. Źródło: GUS",
-            "en": "Median income in the county. Source: GUS",
-            "no": "Median inntekt i fylket. Kilde: GUS"
+            "pl": "Średnie zarobki w powiecie. Źródło: GUS",
+            "en": "Average income in the county. Source: GUS",
+            "no": "Gjennomsnittelig inntekt i fylket. Kilde: GUS"
           }
         },
         {
@@ -227,7 +227,7 @@
       },
       "metrics": [
         {
-          "key": "R_planning",
+          "key": "R_mpzp",
           "name": {
             "pl": "Pokrycie planami miejscowymi (MPZP)",
             "en": "Local planning coverage",
@@ -240,7 +240,7 @@
           }
         },
         {
-          "key": "R_env_expenses",
+          "key": "R_capital",
           "name": {
             "pl": "Wydatki inwestycyjne",
             "en": "Capital expenditure",
@@ -258,7 +258,7 @@
   ],
   "years": [
     {
-      "key": "2030",
+      "key": "2025",
       "name": {
         "pl": "2025",
         "en": "2025",
