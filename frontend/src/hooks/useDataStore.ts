@@ -97,7 +97,14 @@ const sumInvertibleValues = (metrics: Metric[], kommune: KommuneData, elementKey
   ) / kommune.klimarisk_indicator_number[elementKey]; // Normalize by number of indicators to avoid bias towards elements with more metrics
 }
 
-import { defaultRiskColors } from '../assets/colors';
+import {
+  defaultRiskColors,
+  orangeScale,
+  riskPalettes,
+  type RiskPalette
+} from '../assets/colors';
+
+import { viewMode } from './getUrlParams.ts';
 
 interface DataStore {
   dataModel: DataModel | null;
@@ -138,6 +145,8 @@ interface DataStore {
   checkDistribution: () => void;
 
   riskColors: string[];
+  riskPalette: RiskPalette;
+  setRiskPalette: (palette: RiskPalette) => void;
   getRiskColors: (distKey?: DistributionKey) => string[];
 }
 
@@ -473,21 +482,51 @@ const useDataStore = create<DataStore>((set, get) => ({
 
   riskColors: defaultRiskColors,
 
-  getRiskColors: (key) => {
-    const { dataModel } = get();
-    if (!dataModel || !key) return defaultRiskColors;
-    if (key.type === "risk") {
-      return defaultRiskColors;
-    } else if (key.type === "element") {
-      return dataModel.elements.find(e => e.key === key.key)?.invert ? [...defaultRiskColors].reverse() : defaultRiskColors;
-    } else if (key.type === "metric") {
-      const e = dataModel.elements.find(e => e.metrics.some(m => m.key === key.key))!;
-      const m = e.metrics.find(m => m.key === key.key)!;
-      return !!e.invert !== !!m.invert ? [...defaultRiskColors].reverse() : defaultRiskColors;
-    } else {
-      return defaultRiskColors; // never
-    }
+  riskPalette: 'red',
+
+  setRiskPalette: (palette) => {
+    set({ riskPalette: palette });
+    set({ riskColors: get().getRiskColors(get().selectedDistribuion) });
   },
+
+
+getRiskColors: (key) => {
+  const { dataModel, riskPalette } = get();
+
+  const colors =
+    viewMode === 'embedded' && riskPalette === 'red'
+      ? orangeScale
+      : riskPalettes[riskPalette];
+
+  if (!dataModel || !key) {
+    return colors;
+  }
+
+  if (key.type === 'risk') {
+    return colors;
+  }
+
+  if (key.type === 'element') {
+    return dataModel.elements.find(e => e.key === key.key)?.invert
+      ? [...colors].reverse()
+      : colors;
+  }
+
+  if (key.type === 'metric') {
+    const element = dataModel.elements.find(e =>
+      e.metrics.some(m => m.key === key.key)
+    )!;
+
+    const metric = element.metrics.find(m => m.key === key.key)!;
+
+    return !!element.invert !== !!metric.invert
+      ? [...colors].reverse()
+      : colors;
+  }
+
+  return colors;
+},
+
 
 }));
 
