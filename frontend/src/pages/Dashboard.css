@@ -88,3 +88,18 @@
 .panel.details {
   grid-area: details;
 }
+
+.dashboard.chartViewLayout {
+  grid-template-areas:
+    "tree map chartView"
+    "tree map chartView";
+  grid-template-columns: 0 minmax(0, 1fr) minmax(0, 2fr);
+  grid-template-rows: 1fr 1fr;
+  padding-left: var(--grid-gap);
+  padding-right: var(--grid-gap);
+}
+
+.panel.chartView {
+  grid-area: chartView;
+  min-width: 0;
+}

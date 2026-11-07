@@ -33,6 +33,21 @@ const text = {
     },
   },
   panels: {
+    chartView: {
+      en: "Chart view",
+      no: "Diagramvisning",
+      pl: "Widok wykresu",
+    },
+    backToRankings: {
+      en: "Back to rankings",
+      no: "Tilbake til rangeringer",
+      pl: "Powrót do rankingu",
+    },
+    chartViewTooltip: {
+      en: "This chart compares the selected county with the average of counties in its voivodeship and the average of all counties in Poland. The five axes show Hazard, Vulnerability, Exposure, Response, and Total Risk. The first four components range from 0 to 100, while Total Risk ranges from 0 to 400. Higher Hazard, Vulnerability, and Exposure increase risk, while higher Response reduces it. Total Risk is calculated as H + V + E + (100 - R). The values update when the selected county, year, or active indicators change.",
+      pl: "Wykres porównuje wybrany powiat ze średnią powiatów w jego województwie oraz średnią wszystkich powiatów w Polsce. Pięć osi przedstawia Zagrożenie, Wrażliwość, Ekspozycję, Reagowanie i Całkowite ryzyko. Pierwsze cztery komponenty mają skalę od 0 do 100, a całkowite ryzyko od 0 do 400. Wyższe Zagrożenie, Wrażliwość i Ekspozycja zwiększają ryzyko, natomiast wyższe Reagowanie je zmniejsza. Całkowite ryzyko obliczane jest jako H + V + E + (100 - R). Wartości aktualizują się po zmianie powiatu, roku lub aktywnych wskaźników.",
+      no: "Diagrammet sammenligner det valgte fylket med gjennomsnittet for fylkene i samme voivodskap og gjennomsnittet for alle fylker i Polen. De fem aksene viser Fare, Sårbarhet, Eksponering, Respons og Samlet risiko. De fire første komponentene går fra 0 til 100, mens samlet risiko går fra 0 til 400. Høyere Fare, Sårbarhet og Eksponering øker risikoen, mens høyere Respons reduserer den. Samlet risiko beregnes som H + V + E + (100 - R). Verdiene oppdateres når valgt fylke, år eller aktive indikatorer endres.",
+    },
     tree: {
       en: "Risk Customization Tree",
       no: "Risikoens oppbygning",
