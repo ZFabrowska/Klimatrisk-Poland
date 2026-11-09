@@ -1,18 +1,10 @@
 # Climate Risk Poland
 
-Climate Risk Poland is an interactive web-based dashboard for exploring and comparing **climate risk across 380 counties (powiats) in Poland**.
+**[Climate Risk Poland Dashboard](https://zfabrowska.github.io/Klimatrisk-Poland/)** is an interactive web-based dashboard for exploring and comparing **climate risk across 380 counties (powiats) in Poland**.
 
 The application combines climate-related hazards with socioeconomic vulnerability, exposure, and response capacity to provide a comprehensive view of climate risk at the county level. It allows users to explore spatial differences, compare counties, and examine the indicators contributing to the overall climate risk score.
 
 The project is a **Polish adaptation and extension of the original [Klimarisk dashboard](https://github.com/tiltobias/klimarisk)** developed by **Tobias Andresen** as part of his master's thesis in Geomatics at the Norwegian University of Science and Technology (NTNU).
-
-## Online application
-
-The Climate Risk Poland dashboard is hosted by GitHub Pages and is available online at:
-
-**[Climate Risk Poland Dashboard](https://zfabrowska.github.io/Klimatrisk-Poland/)**
-
-The online deployment reflects the latest successfully deployed version of the application.
 
 ## Data
 
