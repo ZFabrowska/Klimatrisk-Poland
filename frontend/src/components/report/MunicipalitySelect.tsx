@@ -36,7 +36,7 @@ function MunicipalitySelect() {
         }
       >
         <option value="" disabled>
-          {l(t.report.selectMunicipality)}
+          {l(t.report.selectCounty)}
         </option>
 
         {municipalitiesSorted.map(([kommuneNr, kommune]) => (

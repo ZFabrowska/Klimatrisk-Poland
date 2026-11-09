@@ -108,10 +108,10 @@ function ReportPage() {
           </h1>
 
           <h2>
-            {l(t.report.selectMunicipality)}
+            {l(t.report.selectCounty)}
           </h2>
           <p>
-            {l(t.report.selectMunicipalityDescription)}
+            {l(t.report.selectCountyDescription)}
           </p>
           <MunicipalitySelect />
 
