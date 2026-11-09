@@ -6,19 +6,23 @@ The application combines climate-related hazards with socioeconomic vulnerabilit
 
 The project is a **Polish adaptation and extension of the original [Klimarisk dashboard](https://github.com/tiltobias/klimarisk)** developed by **Tobias Andresen** as part of his master's thesis in Geomatics at the Norwegian University of Science and Technology (NTNU).
 
-## Dashboard features
+## Online application
 
-The application includes:
+The Klimatrisk Poland dashboard is hosted by GitHub Pages and is available online at:
 
-- **Interactive map of Poland** displaying climate risk across 380 counties.
-- **County rankings** based on the overall climate risk score.
-- **Indicator selection** allowing users to customize the climate risk assessment.
-- **Climate risk components** covering Hazard, Vulnerability, Exposure, and Response.
-- **Comparative visualizations**, including distribution charts and a parallel coordinates chart comparing a selected county with its voivodeship average and the national average.
-- **Data tables and detailed indicator information** for exploring the underlying results.
-- **Year selection** for 2025, 2050, and 2100.
-- **Multiple color palettes** for visualizing spatial differences in climate risk.
-- **Multilingual interface** available in Polish, English, and Norwegian.
+**[Climate Risk Poland Dashboard](https://zfabrowska.github.io/Klimatrisk-Poland/)**
+
+The online deployment reflects the latest successfully deployed version of the application.
+
+## Data
+
+The climate risk indicators are derived from data provided by **KLIMADA** and **Statistics Poland (GUS)**.
+
+For the indicators: heatwaves, heavy rainfall, strong winds, flooding, drought, population density, children, and elderly population, officially available projections were used to obtain values for 2050 and 2100.
+
+For the remaining indicators, available data for 2025 were used as the baseline, and future values for 2050 and 2100 were estimated using damped linear trend extrapolation with a damping factor of 0.9, based on historical data.
+
+The data were processed and normalized to support comparisons between counties, indicators, and selected years. The resulting datasets cover 380 Polish counties and are stored in JSON and GeoJSON formats.
 
 ## Climate risk methodology
 
@@ -42,21 +46,19 @@ Higher Hazard, Vulnerability, and Exposure values increase the overall risk scor
 
 The dashboard allows users to select individual indicators and explore how their inclusion affects the resulting risk assessment.
 
-## Online application
+## Dashboard features
 
-The application is intended to be published using GitHub Pages.
+The application includes:
 
-The public application link will be added after deployment.
-
-## Data
-
-The climate risk indicators are derived from data provided by **KLIMADA** and **Statistics Poland (GUS)**.
-
-For the indicators: heatwaves, heavy rainfall, strong winds, flooding, drought, population density, children, and elderly population, officially available projections were used to obtain values for 2050 and 2100.
-
-For the remaining indicators, available data for 2025 were used as the baseline, and future values for 2050 and 2100 were estimated using damped linear trend extrapolation with a damping factor of 0.9, based on historical data.
-
-The data were processed and normalized to support comparisons between counties, indicators, and selected years. The resulting datasets cover 380 Polish counties and are stored in JSON and GeoJSON formats.
+- **Interactive map of Poland** displaying climate risk across 380 counties.
+- **County rankings** based on the overall climate risk score.
+- **Indicator selection** allowing users to customize the climate risk assessment.
+- **Climate risk components** covering Hazard, Vulnerability, Exposure, and Response.
+- **Comparative visualizations**, including distribution charts and a parallel coordinates chart comparing a selected county with its voivodeship average and the national average.
+- **Data tables and detailed indicator information** for exploring the underlying results.
+- **Year selection** for 2025, 2050, and 2100.
+- **Multiple color palettes** for visualizing spatial differences in climate risk.
+- **Multilingual interface** available in Polish, English, and Norwegian.
 
 ## Repository structure
 
@@ -113,7 +115,3 @@ The original project was developed in the context of a master's thesis in Geomat
 **Climate Risk Poland** builds upon the original dashboard and adapts it to the Polish context, including Polish administrative boundaries, climate risk indicators, datasets, translations, and additional comparative visualizations.
 
 Credit for the original application and its foundational implementation belongs to Tobias Andresen.
-
-## Project status
-
-Klimatrisk Poland is a developed dashboard for exploring and comparing county-level climate risk in Poland. The project is being prepared for public deployment.
