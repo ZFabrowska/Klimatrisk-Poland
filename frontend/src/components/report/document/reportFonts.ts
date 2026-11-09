@@ -1,13 +1,14 @@
 import { Font } from "@react-pdf/renderer";
 
-import sourceSansPro400 from "@fontsource/source-sans-pro/files/source-sans-pro-latin-400-normal.woff";
-import sourceSansPro400Italic from "@fontsource/source-sans-pro/files/source-sans-pro-latin-400-italic.woff";
-import sourceSansPro600 from "@fontsource/source-sans-pro/files/source-sans-pro-latin-600-normal.woff";
-import sourceSansPro600Italic from "@fontsource/source-sans-pro/files/source-sans-pro-latin-600-italic.woff";
-import sourceSansPro700 from "@fontsource/source-sans-pro/files/source-sans-pro-latin-700-normal.woff";
-import sourceSansPro700Italic from "@fontsource/source-sans-pro/files/source-sans-pro-latin-700-italic.woff";
+import sourceSansPro400 from "@fontsource/source-sans-pro/files/source-sans-pro-latin-ext-400-normal.woff";
+import sourceSansPro400Italic from "@fontsource/source-sans-pro/files/source-sans-pro-latin-ext-400-italic.woff";
+import sourceSansPro600 from "@fontsource/source-sans-pro/files/source-sans-pro-latin-ext-600-normal.woff";
+import sourceSansPro600Italic from "@fontsource/source-sans-pro/files/source-sans-pro-latin-ext-600-italic.woff";
+import sourceSansPro700 from "@fontsource/source-sans-pro/files/source-sans-pro-latin-ext-700-normal.woff";
+import sourceSansPro700Italic from "@fontsource/source-sans-pro/files/source-sans-pro-latin-ext-700-italic.woff";
 
-import raleway700 from "@fontsource/raleway/files/raleway-latin-700-normal.woff";
+import raleway700 from "@fontsource/raleway/files/raleway-latin-ext-700-normal.woff";
+
 
 Font.register({
   family: "Source Sans Pro",
